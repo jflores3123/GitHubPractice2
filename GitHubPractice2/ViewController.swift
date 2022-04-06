@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellView", for: indexPath)
         cell.textLabel?.text = name[indexPath.row]
         return cell
         
