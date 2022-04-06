@@ -28,6 +28,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = name[indexPath.row]
         return cell
         
+        
     }
-}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+        {
+            
+            let nvc = segue.destination as! SecondViewController
+            nvc.animal = "Red Panda"
+            
+            guard let selectedRow = tableView.indexPathForSelectedRow?.row else
+            {
+                return
+            }
+        }
+    
+    
+    }
+
 
